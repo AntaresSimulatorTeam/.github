@@ -29,7 +29,7 @@ flowchart TD
     C --> E
 
     %% Links (replace with actual URLs)
-    click A "https://github.com/AntaresSimulatorTeam/datamanager-front" _blank
+    click A "https://github.com/AntaresSimulatorTeam/antares-datamanager-front" _blank
     click B "https://github.com/AntaresSimulatorTeam/antares_craft" _blank
     click C "https://github.com/AntaresSimulatorTeam/AntaREST" _blank
     click D "https://github.com/AntaresSimulatorTeam/Antares_Simulator" _blank
