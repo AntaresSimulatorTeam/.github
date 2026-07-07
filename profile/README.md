@@ -12,30 +12,24 @@ simulating transmission systems at short- or long-term horizons. Its aim is to:
 ## Main applications
 
 ```mermaid
-flowchart TD
-    A[data-manager\nStudy generator]
-    B[antares_craft\nPython library for interacting with Antares studies]
-    C[AntaREST\nWeb interface and REST API]
-    
-    subgraph Core computations
-        direction LR
-        D[Antares_Simulator<br/>Core computations]
-        E[antares-xpansion<br/>Investment module]
-    end
-    A -.-> B
-    B --> C
-    A -.-> C
-    C --> D
-    C --> E
+graph TD;
+data-manager -.-> antares_craft
+data-manager -.-> AntaREST
+antares_craft --> AntaREST
+AntaREST --> core
 
-    %% Links (replace with actual URLs)
-    click A "https://github.com/AntaresSimulatorTeam/antares-datamanager-front" _blank
-    click B "https://github.com/AntaresSimulatorTeam/antares_craft" _blank
-    click C "https://github.com/AntaresSimulatorTeam/AntaREST" _blank
-    click D "https://github.com/AntaresSimulatorTeam/Antares_Simulator" _blank
-    click E "https://github.com/AntaresSimulatorTeam/antares-xpansion" _blank
+subgraph core[Core computations]
+    Antares_Simulator
+    antares-xpansion
+end
 
-    style A stroke-dasharray: 2
+data-manager[<a href="https://github.com/AntaresSimulatorTeam/antares-datamanager-front" style="text-decoration:none;">data-manager</a> <br><span>Antares study generator</span>];
+antares_craft[<a href="https://github.com/AntaresSimulatorTeam/antares_craft" style="text-decoration:none;">antares_craft</a> <br><span>Python library for interacting with Antares studies</span>];
+AntaREST[<a href="https://github.com/AntaresSimulatorTeam/AntaREST" style="text-decoration:none;">AntaREST</a> <br><span>Web interface and REST API</span>];
+antares-xpansion[<a href="https://github.com/AntaresSimulatorTeam/antares-xpansion" style="text-decoration:none;">antares-xpansion</a> <br><span>Investment module</span>];
+Antares_Simulator[<a href="https://github.com/AntaresSimulatorTeam/Antares_Simulator" style="text-decoration:none;">Antares_Simulator</a> <br><span>Simulation engine</span>];
+
+style data-manager stroke-dasharray: 2
 ```
 
 You can find a more functional diagram 
